@@ -1,0 +1,29 @@
+# Generic template only. Configure authentication and HTTPS before exposure.
+# See deploy.md; loopback binding is not authentication for a forwarding proxy.
+services:
+  gorelo-outlook:
+    build:
+      context: .
+    env_file:
+      - .env
+    environment:
+      NODE_ENV: production
+      PORT: "5173"
+      LISTEN_HOST: 0.0.0.0
+      STATIC_DIR: /app/dist
+      GORELO_BASE_URL: ${GORELO_BASE_URL:-https://api.usw.gorelo.io}
+      CORS_ORIGIN: https://gorelo-outlook.example.com
+      REQUIRE_SERVER_KEY: "true"
+      REQUIRE_ENTRA_AUTH: "true"
+      ENTRA_TENANT_ID: ${ENTRA_TENANT_ID:?Set your own Entra tenant ID privately}
+      ENTRA_CLIENT_ID: ${ENTRA_CLIENT_ID:?Set your own Entra client ID privately}
+      ATTACHMENT_RETRY_DIR: /app/retry-data
+      AUDIT_LOG_DIR: /app/retry-data/audit
+    volumes:
+      - ./attachment-retries:/app/retry-data
+    ports:
+      - "127.0.0.1:5173:5173"
+    init: true
+    restart: unless-stopped
+    security_opt:
+      - no-new-privileges:true

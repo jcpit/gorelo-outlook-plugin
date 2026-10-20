@@ -1,0 +1,36 @@
+# Credentials and local authentication/session state.
+.env
+.env.*
+!.env.example
+.railway/
+certs/
+*.key
+*.pem
+*.p12
+*.pfx
+
+# Email content, attachment retry receipts, and private runtime data.
+attachment-retries/
+retry-data/
+audit-data/
+*.jsonl
+*.eml
+*.msg
+*.sqlite
+*.sqlite3
+
+# Dependencies, generated output, archives and local diagnostics.
+node_modules/
+dist/
+server-dist/
+coverage/
+*.log
+*.tar
+*.tar.gz
+*.tgz
+*.zip
+screenshots/
+preview.png
+artifacts/
+.impeccable/review/
+.DS_Store

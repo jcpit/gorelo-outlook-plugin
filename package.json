@@ -1,0 +1,41 @@
+{
+  "name": "gorelo-outlook",
+  "version": "0.1.0",
+  "license": "MIT",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "concurrently -k \"npm:dev:server\" \"npm:dev:web\"",
+    "dev:web": "vite --host 127.0.0.1",
+    "dev:server": "node --env-file-if-exists=.env --import tsx server/index.ts",
+    "start:server": "node --env-file-if-exists=.env --import tsx server/index.ts",
+    "build": "npm run licenses:check && tsc --noEmit && vite build",
+    "test": "node --import tsx --test server/*.test.ts",
+    "test:outlook-host": "node tests/outlook-host.mjs",
+    "test:public-source": "node --test scripts/public-source.test.mjs",
+    "test:licenses": "node --test scripts/licenses.test.mjs",
+    "licenses:update": "node scripts/licenses.mjs --write",
+    "licenses:check": "node scripts/licenses.mjs --check",
+    "public-source": "node scripts/public-source.mjs"
+  },
+  "dependencies": {
+    "@azure/msal-browser": "^5.25.1",
+    "@fortawesome/free-solid-svg-icons": "^6.7.2",
+    "express": "^5.1.0",
+    "jose": "^6.2.12",
+    "sanitize-html": "^2.17.0",
+    "zod": "^4.1.0"
+  },
+  "devDependencies": {
+    "@types/express": "^5.0.3",
+    "@types/node": "^22.18.0",
+    "@types/office-js": "^1.0.572",
+    "@types/sanitize-html": "^2.16.0",
+    "@vitejs/plugin-basic-ssl": "^2.1.0",
+    "concurrently": "^9.2.0",
+    "playwright-core": "^1.63.0",
+    "tsx": "^4.20.0",
+    "typescript": "^5.9.0",
+    "vite": "^7.1.0"
+  }
+}

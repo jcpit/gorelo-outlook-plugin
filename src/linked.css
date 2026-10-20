@@ -1,0 +1,14 @@
+.linked-asset-action {
+  width: 100%;
+  padding: 3px 0;
+  border: 0;
+  background: transparent;
+  color: #21589c;
+  text-align: left;
+  font: inherit;
+  cursor: pointer;
+  overflow-wrap: anywhere;
+}
+
+.linked-asset-action:hover { text-decoration: underline; text-underline-offset: 3px; }
+.linked-asset-action:focus-visible { outline: 3px solid #84b5f4; outline-offset: 2px; }

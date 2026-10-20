@@ -1,0 +1,73 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="referrer" content="no-referrer">
+  <title>Credits and licenses · Gorelo for Outlook</title>
+  <style>
+    @font-face { font-family: 'Source Sans 3'; src: url('/source-sans3-regular.ttf') format('truetype'); font-weight: 400; font-display: swap; }
+    @font-face { font-family: 'Source Sans 3'; src: url('/source-sans3-semibold.ttf') format('truetype'); font-weight: 600; font-display: swap; }
+    :root { color-scheme: dark; font-family: 'Source Sans 3', 'Segoe UI', sans-serif; color: #eff0f1; background: #191a1c; accent-color: #86ebdc; scrollbar-color: #4b4f54 #1f2022; }
+    * { box-sizing: border-box; }
+    body { margin: 0; font-size: 17px; line-height: 1.55; }
+    main { max-width: 72ch; margin-inline: auto; padding: 36px 24px 60px; }
+    h1 { margin: 0 0 12px; font-size: 2rem; line-height: 1.15; font-weight: 600; }
+    h2 { margin: 0 0 8px; font-size: 1.4rem; line-height: 1.25; font-weight: 600; }
+    p { margin: 0 0 12px; }
+    a { color: #86ebdc; text-underline-offset: 3px; overflow-wrap: anywhere; }
+    a:hover { color: #a2f3e7; }
+    a:focus-visible { outline: 2px solid #86ebdc; outline-offset: 3px; }
+    ::selection { background: #3a766d; color: #fff; }
+    nav { display: flex; flex-wrap: wrap; gap: 8px 20px; margin-top: 24px; }
+    nav a { padding-block: 5px; }
+    section { margin-top: 32px; padding-top: 24px; border-top: 1px solid #34363b; }
+    .note { color: #b0b3b9; }
+    @media (max-width: 400px) { main { padding: 24px 18px 40px; } h1 { font-size: 1.8rem; } }
+  </style>
+</head>
+<body>
+  <!-- Narrow legal appendix: inherit the add-in's graphite, mint links and Source Sans typography. Keep credits readable without Office.js, authentication, scripts or business API calls. -->
+  <main>
+    <h1>Credits and licenses</h1>
+    <p>Gorelo for Outlook is an unofficial community add-in. Thank you to the people and projects whose work makes it possible.</p>
+    <p class="note">This is not an official Gorelo tool and is not affiliated with or endorsed by Gorelo. Use at your own risk.</p>
+    <p><a href="/">Return to the add-in</a></p>
+    <nav aria-label="Credit sections">
+      <a href="#icons">Icons</a>
+      <a href="#fonts">Fonts</a>
+      <a href="#software">Software</a>
+      <a href="#branding">Branding</a>
+    </nav>
+
+    <section id="icons">
+      <h2>Font Awesome Free icons</h2>
+      <p>Font Awesome Free 6.7.2 by <a href="https://fontawesome.com/">Fonticons, Inc.</a> Copyright 2024 Fonticons, Inc. The eight solid icons used here are licensed under <a href="https://creativecommons.org/licenses/by/4.0/">Creative Commons Attribution 4.0 International (CC BY 4.0)</a>.</p>
+      <p>Icons: envelope, ticket, computer, arrow-right, arrow-left, circle-check, paperclip and triangle-exclamation. Their paths are unmodified; display size and color are set by this app. No Font Awesome Pro assets are included.</p>
+      <p><a href="/licenses/npm-dependencies.md">Full Font Awesome package license and notices</a>, including the MIT license for its non-icon code.</p>
+    </section>
+
+    <section id="fonts">
+      <h2>Source Sans 3</h2>
+      <p>Typeface designed by Paul D. Hunt for Adobe. The unmodified Regular, Semibold and Bold files are from Adobe's Source Sans 3 release 3.052R and carry this embedded notice:</p>
+      <p>© 2023 Adobe (http://www.adobe.com/), with Reserved Font Name ‘Source’</p>
+      <p>Licensed under the <a href="/licenses/source-sans-3-OFL.md">SIL Open Font License 1.1 (full text, notices and pinned source)</a>. <a href="https://github.com/adobe-fonts/source-sans/tree/ed1808970eb3c7301c9a523bee26473ba0bb62fa">Verified Adobe source release</a>.</p>
+      <p class="note">Fonts are self-hosted; no external font service is contacted. The matching upstream licence retains its original 2010–2022 copyright notice alongside the fonts' embedded 2023 notice.</p>
+    </section>
+
+    <section id="software">
+      <h2>Open-source software</h2>
+      <p>Microsoft Authentication Library (MSAL) for JavaScript, including MSAL Browser and MSAL Common, is © Microsoft Corporation, licensed under the MIT License.</p>
+      <p>This project also uses Express, jose, sanitize-html, Zod and Font Awesome packages. Their authors retain their respective copyrights.</p>
+      <p><a href="/licenses/npm-dependencies.md">Full browser and direct-runtime dependency licenses and notices</a>. Installed server-side dependencies retain their upstream license files; the accompanying notice document is not a complete legal review of every transitive dependency.</p>
+      <p>The project's original code and documentation are <a href="/licenses/project-MIT.md">MIT-licensed (full license)</a>. That license does not relicense third-party software, fonts or artwork.</p>
+    </section>
+
+    <section id="branding">
+      <h2>Gorelo name and artwork</h2>
+      <p>The Gorelo name, logo and related add-in artwork identify the compatible service and remain the property of their respective rights holders. Attribution does not grant trademark rights or imply endorsement.</p>
+      <p class="note">This community add-in is not affiliated with or endorsed by Gorelo.</p>
+    </section>
+  </main>
+</body>
+</html>

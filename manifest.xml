@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<OfficeApp xmlns="http://schemas.microsoft.com/office/appforoffice/1.1" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:bt="http://schemas.microsoft.com/office/officeappbasictypes/1.0" xmlns:mailappor="http://schemas.microsoft.com/office/mailappversionoverrides/1.0" xsi:type="MailApp">
+  <!-- Example development installation ID; choose your own stable UUID. -->
+  <Id>00000000-0000-4000-8000-000000000003</Id>
+  <Version>1.0.0.0</Version>
+  <ProviderName>Gorelo Outlook Integration</ProviderName>
+  <DefaultLocale>en-US</DefaultLocale>
+  <DisplayName DefaultValue="Gorelo for Outlook"/>
+  <Description DefaultValue="Unofficial integration. Not affiliated with or endorsed by Gorelo. Use at your own risk."/>
+  <IconUrl DefaultValue="https://localhost:5173/icon-64.png"/>
+  <HighResolutionIconUrl DefaultValue="https://localhost:5173/icon-128.png"/>
+  <SupportUrl DefaultValue="https://localhost:5173/"/>
+  <AppDomains><AppDomain>https://localhost:5173</AppDomain></AppDomains>
+  <Hosts><Host Name="Mailbox"/></Hosts>
+  <Requirements><Sets><Set Name="Mailbox" MinVersion="1.8"/></Sets></Requirements>
+  <FormSettings><Form xsi:type="ItemRead"><DesktopSettings><SourceLocation DefaultValue="https://localhost:5173/"/><RequestedHeight>450</RequestedHeight></DesktopSettings></Form></FormSettings>
+  <Permissions>ReadItem</Permissions>
+  <Rule xsi:type="ItemIs" ItemType="Message" FormType="Read"/>
+  <DisableEntityHighlighting>false</DisableEntityHighlighting>
+  <VersionOverrides xmlns="http://schemas.microsoft.com/office/mailappversionoverrides" xsi:type="VersionOverridesV1_0">
+    <Requirements><bt:Sets DefaultMinVersion="1.8"><bt:Set Name="Mailbox"/></bt:Sets></Requirements>
+    <Hosts><Host xsi:type="MailHost"><DesktopFormFactor><FunctionFile resid="Taskpane.Url"/><ExtensionPoint xsi:type="MessageReadCommandSurface"><OfficeTab id="TabDefault"><Group id="Gorelo.Group"><Label resid="Group.Label"/><Control xsi:type="Button" id="Gorelo.CreateTicket"><Label resid="Button.Label"/><Supertip><Title resid="Button.Label"/><Description resid="Button.Description"/></Supertip><Icon><bt:Image size="16" resid="Icon.16"/><bt:Image size="32" resid="Icon.32"/><bt:Image size="80" resid="Icon.80"/></Icon><Action xsi:type="ShowTaskpane"><SourceLocation resid="Taskpane.Url"/></Action></Control></Group></OfficeTab></ExtensionPoint></DesktopFormFactor></Host></Hosts>
+    <Resources><bt:Images><bt:Image id="Icon.16" DefaultValue="https://localhost:5173/icon-16.png"/><bt:Image id="Icon.32" DefaultValue="https://localhost:5173/icon-32.png"/><bt:Image id="Icon.80" DefaultValue="https://localhost:5173/icon-80.png"/></bt:Images><bt:Urls><bt:Url id="Taskpane.Url" DefaultValue="https://localhost:5173/"/></bt:Urls><bt:ShortStrings><bt:String id="Group.Label" DefaultValue="Gorelo"/><bt:String id="Button.Label" DefaultValue="Create Gorelo ticket"/></bt:ShortStrings><bt:LongStrings><bt:String id="Button.Description" DefaultValue="Capture the selected email as a Gorelo ticket"/></bt:LongStrings></Resources>
+  </VersionOverrides>
+</OfficeApp>
